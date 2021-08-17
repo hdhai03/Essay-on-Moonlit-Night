@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <title>Essay on Moonlit Night</title>
+  <!-- main css -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Essay on Moonlit Night</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Essay on Moonlit Night</h2>
+        <p>The moon is the queen of night and a splendour among starry heavens. A walk in a moonlit night is really a refreshing and fascinating experience. Strolling in a moonlit night is pleasant and delightful in ways more than one. <br><br>
+
+            Walking in the moonlit night does not only remove the weariness and boredom of the hectic day but also it elevates our spirit, enlivens our soul and refreshes our mind.<br><br>
+            
+            The atmosphere during a moonlit night is reigned by calmness and quietness if we walk through the countryside, which is away from humdrum, noise and clamour of cities. Moreover, the cool air and the cool beams of the moon, kissing each and every object of nature, present a charming sight.<br><br>
+            
+            One really feels thrilled and relieved. One feels a sense of joy. There comes the freedom of mind, thoughts and ideas. A moonlit night delights our heart and soul. The tranquil surrounding in the countryside or distant landscapes present a lovely sight.<br><br>
+            
+            The moon shines like a lighthouse to guide us in the night. And in such a night, away from the din and dust of cities, when we are in the company of our dearest friends, cutting jokes and chatting with them it is an alluring pleasure. The stars in the presence of the moon make it the guardian of all the stars.<br><br>
+            
+            The entire nature is clothed in the shining silvery robes of the moonlit night. Every object appears to be cheerful and mirthful. The flowers emitting sweet fragrance, the petals dancing to the tune of soothing and cool wind and the trees whispering in the breeze really render a fascinating spectacle.<br><br>
+            
+            The green fields, flowers and fruits dance in a coherent rhythm because of wind and moonlight. Indeed, moonlight is a feast for eyes. The superb sights scenes and sounds of nature are enhancing.<br><br>
+            
+            To play, sing and talk would be some of the coveted pleasures of a moonlit night. The memories of a moonlit night are still fresh in my mind and still hurting my mind. A Walk in a moonlit night is a good experience because we come close to mother nature.<br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');   
+        let btn = document.getElementById('btn');   
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.left = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px'; 
+        })
+    </script>
+</body>
